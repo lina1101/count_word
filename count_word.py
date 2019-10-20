@@ -21,7 +21,8 @@ def count_word():
     count = 0
 
     for item_list in response_list:
-        if input_word.lower() in [item.lower() for item in item_list]:
+        item_list_lower = [item.lower() for item in item_list]
+        if input_word.lower() in item_list_lower:
             count = count + 1
 
     return count
